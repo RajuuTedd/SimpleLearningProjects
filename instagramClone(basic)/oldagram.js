@@ -29,10 +29,40 @@ const posts = [
   },
 ];
 
-const likeBtn = document.getElementById("like-btn");
-const likeCountlable = document.getElementById("like-count");
-let likes = 12492;
-likeBtn.addEventListener("click", () => {
-  likes++;
-  likeCountlable.textContent = likes.toLocaleString();
+const feedContainer = document.getElementById("feed-container");
+
+feedContainer.innerHTML = "";
+
+posts.forEach((postData) => {
+  const postHtml = `  <section class="post-container">
+        <section class="username-name">
+          <img src="${postData.avatar}" alt="${postData.name}" class="Avatar" />
+          <div class="profile-info">
+            <p class="user-name">${postData.name}</p>
+            <p class="user-location">${postData.location}</p>
+          </div>
+        </section>
+
+        <img src="${postData.post}" alt="post by ${
+    postData.name
+  }" class="Post" />
+
+        <section class="buttons">
+          <button class="icon-btn like-btn">
+            <img src="images/icon-heart.png" alt="Heart icon" class="icon" />
+          </button>
+          <button class="icon-btn">
+            <img src="images/icon-comment.png" alt="Comment icon" class="icon" />
+          </button>
+          <button class="icon-btn">
+            <img src="images/icon-dm.png" alt="DM icon" class="icon" />
+          </button>
+        </section>
+        
+        <p><span class="likes">${postData.likes.toLocaleString()}</span> <b>likes</b></p>
+        <p><b>${postData.username}</b> ${postData.comment}</p>
+    </section>
+  `;
+
+  feedContainer.innerHTML += postHtml;
 });
