@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #fafafa;
+}
+
+.app-content {
+  width: 375px;
+  min-height: 612px;
+  background-color: white;
+}
+
+header {
+  height: 67px;
+  width: 375px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.logo {
+  padding: 15px 16px;
+  width: 100px;
+  height: 40px;
+}
+
+.user-avatar {
+  margin: 15px 16px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid black;
+  display: block;
+  border-radius: 50%;
+}
+
+.username-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 10px;
+}
+
+.Avatar {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.user-location {
+  margin: 0;
+  font-size: 12px;
+}
+
+.Post {
+  width: 375px;
+  height: 375px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  padding-top: 21px;
+}
+
+.icon {
+  height: 23px;
+  width: 23px;
+  display: block;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  filter: drop-shadow(0 0 8px #d6249f) drop-shadow(0 0 12px #fd1d1d);
+  border-radius: 50%; /* Makes the background a circle */
+  padding: 5px; /* Gives space so the icon doesn't touch the edge */
+  display: flex; /* Centers the icon inside the circle */
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:active {
+  transform: scale(0.9);
+}
+
+.likes {
+  font-weight: bold;
+}
