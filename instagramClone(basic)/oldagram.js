@@ -34,7 +34,7 @@ const feedContainer = document.getElementById("feed-container");
 feedContainer.innerHTML = "";
 
 posts.forEach((postData) => {
-  const postHtml = `  <section class="post-container">
+  const postHtml = `<section class="post-container">
         <section class="username-name">
           <img src="${postData.avatar}" alt="${postData.name}" class="Avatar" />
           <div class="profile-info">
